@@ -1,4 +1,4 @@
-name: util-npm-publish
+name: util-npm-publish2
 concurrency:
   group: npm-publish-${{github.sha}}
   cancel-in-progress: false

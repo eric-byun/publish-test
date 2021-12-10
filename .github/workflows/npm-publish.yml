@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths-ignore:
-      - src/*.spec.js
+      - src/*.spec.ts
       - .github/**/*
 
 jobs:

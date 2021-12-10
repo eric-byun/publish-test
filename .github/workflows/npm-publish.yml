@@ -1,7 +1,4 @@
 name: util-npm-publish2
-concurrency:
-  group: npm-publish-${{github.sha}}
-  cancel-in-progress: false
 
 on:
   push:
@@ -15,17 +12,7 @@ on:
 
 jobs:
   build:
-    needs: ci-label-test
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      packages: write
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 100 # 최근 100개 커밋에서 pacakge.json 버전변경 확인
-          token: ${{ env.PUSH_TOKEN }}
-
       - uses: actions/setup-node@v2
         with:
           node-version: '16.x'

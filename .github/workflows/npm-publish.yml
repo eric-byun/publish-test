@@ -4,11 +4,9 @@ on:
   push:
     branches:
       - master
-    paths:
-      - src/**/*.ts
-      - package.json
     paths-ignore:
-      - src/**/*.spec.ts
+      - src/**/*.spec.js
+      - .github/**/*
 
 jobs:
   build:
